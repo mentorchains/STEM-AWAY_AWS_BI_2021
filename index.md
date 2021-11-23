@@ -5,8 +5,6 @@
 
 A snapshot demo of launching an AWS EC2 Instance is described [here](AWS_EC2_launch.pdf).
 
-
-
 ### Installing Docker in your EC2 Instance:
 
 ```Shell
