@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+## AWS Deployment of R Shiny Bioinformatics App 
+> An example of [sMAP: Standard Microarray Analysis Pipeline](https://github.com/BI-STEM-Away/sMAP).
 
-You can use the [editor on GitHub](https://github.com/mentorchains/STEM-AWAY_AWS_BI_2021/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Launching an EC2 Instance from your AWS Management Console dashboard
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A snapshot demo of launching an AWS EC2 Instance is described [here](AWS_EC2_launch_and_connect.pdf).
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Installing Docker in your EC2 Instance:
 
-# Header 1
-## Header 2
-### Header 3
+```Shell
+sudo apt-get update
 
-- Bulleted
-- List
+sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
 
-1. Numbered
-2. List
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-**Bold** and _Italic_ and `Code` text
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com\
+/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-[Link](url) and ![Image](src)
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+### Pulling and Running sMAP application in background at port 80 of your EC2 Instance:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mentorchains/STEM-AWAY_AWS_BI_2021/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+`sudo docker run --rm -d -p 80:80 samuelbharti/smap:latest`
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Post-deployment: Demo of sMAP
+
+A snapshot demo of sMAP analysis is described [here](sMAP_demo.pdf).
+
+
+Check out more of our internship and career advancement programs, workshop and mini-projects at [stemaway.com](https://stemaway.com/)
