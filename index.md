@@ -34,4 +34,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 A snapshot demo of sMAP analysis is described [here](sMAP_demo.pdf).
 
 
-Check out more of our internship and career advancement programs, workshop and mini-projects at [stemaway.com](https://stemaway.com/)
+> Check out more of our internship and career advancement programs, workshop and mini-projects at [stemaway.com](https://stemaway.com/)
