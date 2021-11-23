@@ -3,7 +3,7 @@
 
 ### Launching an EC2 Instance from your AWS Management Console dashboard
 
-A snapshot demo of launching an AWS EC2 Instance is described [here](AWS_EC2_launch.pdf).
+A snapshot demo of launching an AWS EC2 Instance is described [here](AWS_EC2.pdf).
 
 ### Installing Docker in your EC2 Instance:
 
